@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="MocViet Studio — phát triển ứng dụng và trò chơi. Trợ Lý Hẹn giúp đọc giấy mời, tạo lịch và nhắc hẹn.">
+  <title>MocViet Studio — Trợ Lý Hẹn</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --green: #08765b;
+      --ink: #183b32;
+      --muted: #52675f;
+      --line: #dce9e2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f6faf7;
+      color: var(--ink);
+      font: 16px/1.7 system-ui, sans-serif;
+    }
+    .wrap {
+      width: min(960px, 100%);
+      margin: auto;
+      padding: 0 24px;
+    }
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand { font-size: 20px; font-weight: 750; }
+    a { color: var(--green); }
+    nav a { text-decoration: none; font-weight: 600; }
+    .hero { padding: 64px 0 44px; }
+    .tag {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 30px;
+      background: #e1f0e6;
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    h1 {
+      margin: 20px 0 12px;
+      font-size: clamp(36px, 7vw, 60px);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+    }
+    .intro {
+      max-width: 640px;
+      font-size: 19px;
+      color: var(--muted);
+    }
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 26px 0 18px;
+    }
+    .button {
+      padding: 12px 20px;
+      border-radius: 12px;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      font-weight: 650;
+    }
+    .button.secondary {
+      background: white;
+      color: var(--green);
+      border: 1px solid var(--line);
+    }
+    .notice { color: var(--muted); font-size: 14px; }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      padding: 24px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+    h2 { margin: 0 0 12px; font-size: 23px; }
+    h3 { margin: 0 0 8px; font-size: 18px; }
+    p { margin: 0 0 14px; }
+    .card p { color: var(--muted); margin-bottom: 0; }
+    .about { margin: 28px 0 40px; }
+    footer {
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer a { overflow-wrap: anywhere; }
+    a:focus-visible {
+      outline: 3px solid #d6a52d;
+      outline-offset: 5px;
+    }
+    @media (max-width: 540px) {
+      .hero { padding-top: 40px; }
+      .actions { flex-direction: column; }
+      .button { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Điều hướng chính">
+      <span class="brand">MocViet Studio</span>
+      <a href="mailto:mocvietstudio.support@gmail.com">
+        Liên hệ hỗ trợ
+      </a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="app-title">
+      <span class="tag">Ứng dụng quản lý lịch và nhắc hẹn</span>
+      <h1 id="app-title">Trợ Lý Hẹn</h1>
+      <p class="intro">
+        Đọc giấy mời từ ảnh hoặc PDF, kiểm tra thông tin
+        và lưu cuộc họp vào lịch ngay trong ứng dụng.
+        Chủ động sắp xếp công việc và theo dõi lịch hẹn mỗi ngày.
+      </p>
+      <div class="actions">
+        <a class="button"
+           href="mailto:mocvietstudio.support@gmail.com">
+          Gửi yêu cầu hỗ trợ
+        </a>
+        <a class="button secondary"
+           href="https://thailh03.github.io/mocviet-studio/privacy.html">
+          Chính sách quyền riêng tư
+        </a>
+      </div>
+      <p class="notice">
+        Ứng dụng đang trong quá trình thử nghiệm,
+        chưa phát hành công khai trên Google Play.
+      </p>
+    </section>
+
+    <section aria-label="Chức năng của Trợ Lý Hẹn">
+      <div class="features">
+        <article class="card">
+          <h3>Đọc giấy mời</h3>
+          <p>
+            Chọn nhiều ảnh hoặc PDF để nhận dạng nội dung,
+            ngày giờ, địa điểm và thành phần tham dự.
+            Kiểm tra, chỉnh sửa kết quả trước khi lưu.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Quản lý lịch</h3>
+          <p>
+            Xem cuộc họp theo ngày, thêm lịch hẹn bằng tay,
+            ghi chú và chỉnh sửa thông tin khi kế hoạch thay đổi.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Nhắc hẹn</h3>
+          <p>
+            Chọn thời điểm nhắc phù hợp. Thông báo phụ thuộc
+            quyền đã cấp và cài đặt hoạt động nền của điện thoại.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card about" aria-labelledby="studio-title">
+      <h2 id="studio-title">Về MocViet Studio</h2>
+      <p>
+        MocViet Studio phát triển ứng dụng và trò chơi.
+        Với Trợ Lý Hẹn, chúng tôi hướng đến trải nghiệm
+        quản lý giấy mời và lịch hẹn đơn giản, dễ sử dụng.
+      </p>
+      <p>
+        Bạn có thể gửi góp ý hoặc báo lỗi qua email hỗ trợ.
+        Vui lòng mô tả vấn đề và phiên bản ứng dụng;
+        không gửi mật khẩu, mã xác minh hoặc giấy tờ nhạy cảm.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2026 MocViet Studio</p>
+      <p>
+        Hỗ trợ:
+        <a href="mailto:mocvietstudio.support@gmail.com">
+          mocvietstudio.support@gmail.com
+        </a>
+      </p>
+      <a href="https://thailh03.github.io/mocviet-studio/privacy.html">
+        Chính sách quyền riêng tư của Trợ Lý Hẹn
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
